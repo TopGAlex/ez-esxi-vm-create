@@ -1,6 +1,3 @@
-#!/usr/bin/python
-
-
 import argparse                   # Argument parser
 import datetime                   # For current Date/Time
 import os.path                    # To check if file exists
