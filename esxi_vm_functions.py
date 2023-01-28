@@ -77,9 +77,9 @@ def setup_config():
             yaml.dump(ConfigData, FD, default_flow_style=False)
         FD.close()
     except:
-        print "Unable to create/update config file " + ConfigDataFileLocation
+        print("Unable to create/update config file " + ConfigDataFileLocation)
         e = sys.exc_info()[0]
-        print "The Error is " + str(e)
+        print("The Error is " + str(e))
         sys.exit(1)
     return ConfigData
 
@@ -90,9 +90,9 @@ def SaveConfig(ConfigData):
             yaml.dump(ConfigData, FD, default_flow_style=False)
         FD.close()
     except:
-        print "Unable to create/update config file " + ConfigDataFileLocation
+        print("Unable to create/update config file " + ConfigDataFileLocation)
         e = sys.exc_info()[0]
-        print "The Error is " + str(e)
+        print("The Error is " + str(e))
         return 1
     return 0
 
@@ -102,7 +102,7 @@ def theCurrDateTime():
     return str(i.isoformat())
 
 
-unit_list = zip(['bytes', 'kB', 'MB', 'GB', 'TB', 'PB'], [0, 0, 1, 2, 2, 2])
+unit_list = list(zip(['bytes', 'kB', 'MB', 'GB', 'TB', 'PB'], [0, 0, 1, 2, 2, 2]))
 def float2human(num):
     """Integer to Human readable"""
     if num > 1:
@@ -115,3 +115,4 @@ def float2human(num):
         return '0 bytes'
     if num == 1:
         return '1 byte'
+
